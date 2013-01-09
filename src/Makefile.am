@@ -18,6 +18,7 @@ AM_VALAFLAGS =					\
 
 wixl_SOURCES =					\
 	builder.vala				\
+	msi-default.vala			\
 	msi.vala				\
 	preprocessor.vala			\
 	util.vala				\
