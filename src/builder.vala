@@ -284,7 +284,7 @@ namespace Wixl {
 
             if (dir.parent.get_type () == typeof (WixProduct)) {
                 if (dir.Id != "TARGETDIR")
-                    throw new Wixl.Error.FAILED ("Invalid root directory");
+                    throw new Wixl.Error.FAILED ("Invalid root directory. All Directory nodes need to have a comon parent: <Directory Id='TARGETDIR' Name='SourceDir'>");
                 db.table_directory.add (dir.Id, null, defaultdir);
             } else if (dir.parent.get_type () == typeof (WixDirectory)) {
                 var parent = dir.parent as WixDirectory;
